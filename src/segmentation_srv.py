@@ -8,12 +8,9 @@ from segmentation import YOLOSegmentation
 import yolov8_ros.srv
 import numpy as np
 
-print(yolov8_ros.__file__)
 from dynamic_reconfigure.server import Server
 import yolov8_ros.cfg
 from yolov8_ros.cfg import segmentationConfig
-
-#TODO todel
 import cv2
 
 class segGenerator():

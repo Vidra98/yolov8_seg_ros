@@ -25,4 +25,6 @@
         <param name="model_size" value="$(arg model_size)"/>
     </node >
 
+    <node name="reconfigure_gui" pkg="rqt_reconfigure" type="rqt_reconfigure" />
+
 </launch>

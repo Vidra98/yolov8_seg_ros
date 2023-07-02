@@ -1,0 +1,4 @@
+ultralytics
+rospkg
+pyside2
+PyQt5==5.11.2
