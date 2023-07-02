@@ -1,0 +1,30 @@
+<launch>
+    <arg name="iou_threshold" default="0.4"/>
+    <arg name="confidence_threshold" default="0.3"/>
+    <arg name="device" default="cpu"/>
+    <arg name="classes" default="47"/>
+    <arg name="segmentation_type" default="instance" />
+    <arg name="segWindowMinX" default="320"/>
+    <arg name="segWindowMaxX" default="1280"/>
+    <arg name="segWindowMinY" default="0"/>
+    <arg name="segWindowMaxY" default="780"/>
+    <arg name="publish_segmap" default="true"/> 
+    <arg name="model_size" default="s"/>
+
+    <node name="segmentation" pkg="yolov8_ros" type="segmentation_srv.py" output="screen">
+        <param name="iou_threshold" value="$(arg iou_threshold)"/>
+        <param name="confidence_threshold" value="$(arg confidence_threshold)"/>
+        <param name="device" value="$(arg device)"/>
+        <param name="classes" value="$(arg classes)"/>
+        <param name="segmentation_type" value="$(arg segmentation_type)"/>
+        <param name="segWindowMinX" value="$(arg segWindowMinX)"/>
+        <param name="segWindowMaxX" value="$(arg segWindowMaxX)"/>
+        <param name="segWindowMinY" value="$(arg segWindowMinY)"/>
+        <param name="segWindowMaxY" value="$(arg segWindowMaxY)"/>
+        <param name="publish_segmap" value="$(arg publish_segmap)"/>
+        <param name="model_size" value="$(arg model_size)"/>
+    </node >
+
+    <node name="reconfigure_gui" pkg="rqt_reconfigure" type="rqt_reconfigure" />
+
+</launch>
