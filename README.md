@@ -1,4 +1,3 @@
-```
 # YOLOv8 Segmentation Service
 
 This repository contains a ROS service for performing image segmentation using YOLOv8. The service takes a BGR image as input and returns a black and white image with segmentation indices.
@@ -59,6 +58,5 @@ This repository consist simply of a wrapper for the implementation of Ultralytic
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-```
 
 Feel free to modify the content as needed to suit your specific project.
