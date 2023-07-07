@@ -63,8 +63,7 @@ class segGenerator():
                 self.seg = YOLOSegmentation(model_size=self.model_size)
                 print("Model size changed to {}".format(self.model_size))
 
-        except e:
-            print(e)
+        except:
             rospy.logwarn("No parameters found, using default values")
         cv2.imwrite("/home/vdrame/test.png", rgb)
         # Call the segmentation model
